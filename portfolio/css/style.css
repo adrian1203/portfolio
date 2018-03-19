@@ -3,6 +3,15 @@
     font-family: 'Acme', sans-serif;
     font-size: 20px;
 }
+#building{
+    position: fixed;
+    height: 50px;
+    width: 100px;
+    color: coral;
+    z-index: 1100;
+    text-align: center;
+    padding: 10px;
+}
 #menu {
     background: #FFFFFF;
     text-align: center;
@@ -47,7 +56,7 @@ a {
 
 }
 
-#menu_element {
+#menu-element {
     color: #1f2021;
     padding: 10px;
     line-height: 70px;
@@ -55,7 +64,7 @@ a {
     border-radius: 10px;
 }
 
-#menu_element :hover {
+#menu-element :hover {
     color: #f7f7f7;
     padding: 10px;
     background-color: #6693a5;
@@ -66,7 +75,7 @@ a {
     
 }
 
-#menu_element :visited {
+#menu-element :visited {
     color: #1f2021;
     padding: 20px;
     background-color: #6693a5;
@@ -78,11 +87,11 @@ a {
 
 }
 
-#menu_lists {
+#menu-lists {
     position: relative;
 
 }
-#project_cointainer{
+#project-cointainer{
     border-radius: 20px;
 }
 #project {
