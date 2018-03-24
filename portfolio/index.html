@@ -11,32 +11,23 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<div id="building">
-    Website under construction
-</div>
+    <script src="jquery-3.2.1.min.js"></script>
+    <div id="building">
+        Website under construction
+    </div>
     <nav class="cointainer-fluid">
         <div class="row justify-content-md-center">
             <div id="menu" class="col-md-6 col-xs-8">
                 <div id="menu-lists" class="row align-items-center">
-                    <div id="menu-element" class="col-md">
-                        <a href="">Start</a>
-                    </div>
-                    <div id="menu-element" class="col-md">
-                        <a href="#projects-cointainer">Projects</a>
-                    </div>
-                    <div id="menu-element" class="col-md">
-                        <a href="#education-cointainer">Education</a>
-                    </div>
-                    <div id="menu-element" class="col-md">
-                        <a href="#skils-cointainer">Skils</a>
-                    </div>
-                    <div id="menu-element" class="col-md">
-                        <a href="#contact_cointainer">Contact</a>
-                    </div>
+                    <a href="#header" id="menu-element" class="col-md btn btn-primary" >Start</a>
+                    <a href="#projects-cointainer" id="menu-element" class="col-md btn btn-primary">Projects</a>
+                    <a href="#education-cointainer" id="menu-element" class="col-md btn btn-primary">Education</a>
+                    <a href="#skils-cointainer" id="menu-element" class="col-md btn btn-primary">Skils</a>
+                    <a href="#contact-cointainer" id="menu-element" class="col-md btn btn-primary">Contact</a>
                 </div>
             </div>
         </div>
@@ -50,8 +41,9 @@
         </div>
     </nav>
     <div class="container-fluid light-cointainer" id="projects-cointainer">
-        <h2><br>PROJECTS</h2>
-        <div class="row justify-content-md-center" id="projects_lists">
+        <br>
+        <h1>PROJECTS</h1>
+        <div class="row justify-content-md-center" id="projects-lists">
             <div id="project" class="col-md-10">
 
                 <div id="project-left" class="col-6">
@@ -73,15 +65,12 @@
                     <h2>CrossWord Generator</h2>
 
                 </div>
-
             </div>
-
-
-
         </div>
     </div>
     <div class="container-fluid dark-cointainer" id="education-cointainer">
-        <h2> <br>EDUCATION</h2>
+        <br>
+        <h1>EDUCATION</h1>
         <div class="row justify-content-md-center" id="projects_lists">
             <div id="project" class="col-md-10">
                 <h3>Computer Sciene</h3>
@@ -96,14 +85,17 @@
         </div>
     </div>
     <div class="container-fluid light-cointainer" id="skils-cointainer">
-        <h2> <br>SKILS</h2>
-        <div class="row justify-content-md-center" id="projects_lists">
+        <br>
+        <h1>SKILS</h1>
+        <div class="row justify-content-md-center" id="skils-lists">
             <div id="project" class="col-md-10">
                 Good knowledge of<br>
                 <input id="skils-button" class="btn btn-primary" type="button" value="Java">
                 <input id="skils-button" class="btn btn-primary" type="button" value="C/C++">
                 <input id="skils-button" class="btn btn-primary" type="button" value="Git">
-                <input id="skils-button" class="btn btn-primary" type="button" value="JavaFx">
+                <input id="skils-button" class="btn btn-primary" type="button" value="HTML">
+                <input id="skils-button" class="btn btn-primary" type="button" value="CSS">
+                <input id="skils-button" class="btn btn-primary" type="button" value="JavaScript">
             </div>
             <div id="project" class="col-md-10">
                 Knowledge of<br>
@@ -111,11 +103,13 @@
                 <input id="skils-button" class="btn btn-primary" type="button" value="Python">
                 <input id="skils-button" class="btn btn-primary" type="button" value="MySQL">
                 <input id="skils-button" class="btn btn-primary" type="button" value="Bootstrap">
+                <input id="skils-button" class="btn btn-primary" type="button" value="JavaFx">
             </div>
         </div>
     </div>
-    <div class="container-fluid dark-cointainer" id="contact_cointainer">
-        <h2> <br>CONTACT</h2>
+    <div class="container-fluid dark-cointainer" id="contact-cointainer">
+        <br>
+        <h1> CONTACT</h1>
         <div class="row justify-content-md-center" id="projects-lists">
             <div id="project" class="col-md-10">
                 <div class="row justify-content-md-center" id="projects_lists">
@@ -134,6 +128,21 @@
     </div>
 
 
+    <script>
+        $(document).ready(function(){
+            $("#menu-lists a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function(){
+                        window.location.hash = hash;
+                    });
+                }  
+            });
+        });
+    </script>
 
 </body>
 
