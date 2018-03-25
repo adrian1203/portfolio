@@ -4,15 +4,7 @@
     font-size: 20px;
 }
 
-#building {
-    position: fixed;
-    height: 50px;
-    width: 100px;
-    color: coral;
-    z-index: 1100;
-    text-align: center;
-    padding: 10px;
-}
+
 
 #menu {
     background: #FFFFFF;
@@ -103,21 +95,33 @@ a {
 
 #project-left {
     background-size: cover;
-    float: left;
-    max-width: 50%;
-    min-height: 300px;
     border-radius: 20px;
+    float: left;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#project-left img {
+    line-height: 100%;
+    border-radius: 10px;
     border-style: solid;
+    border-color: #1da4d1;
 }
 
 #project-right {
-    background-color: aliceblue;
-    float: right;
-    max-width: 50%;
     min-height: 300px;
+    display: inline;
+
+}
+
+#project-right img {
+    border-radius: 10px;
+}
+
+#project-right img :hover {
+    border-radius: 10px;
+    opacity: 0.8;
 }
 
 .dark-cointainer {
@@ -133,6 +137,7 @@ a {
     border-top: #6e7057;
     border-top-style: outset;
 }
+
 #skils-lists .btn-primary {
     margin: 10px;
 }
