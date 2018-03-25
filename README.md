@@ -1,2 +1,2 @@
-# Adrian Opiela portfolio [website under construction]
+# Adrian Opiela portfolio
 http://adrianop.5v.pl
