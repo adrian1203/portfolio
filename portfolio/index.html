@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Acme|IBM+Plex+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="css/slider.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400i|Roboto+Condensed:400,700|Amatic+SC|Cormorant+Garamond:300,400|Roboto+Slab:700&amp;subset=latin-ext" rel="stylesheet">
+
 
 </head>
 
@@ -40,38 +44,47 @@
     <div class="container-fluid light-cointainer" id="projects-cointainer">
         <br>
         <h1>PROJECTS</h1>
-        <div class="row justify-content-md-center" id="projects-lists">
-            <div id="project" class="col-md-10">
+        <div class="row justify-content-md-center">
+            <div class="chuj" id="project">
+                <div id="project" class="projects-list  elements-list">
+                    <div id="pupa" class="slider-slides-cnt slider">
+                        <article id="jeden" class="element slider-slide">
+                            <h2 class="element-title">
+                                Auto Centre Website
+                            </h2>
+                            <div class="element-text">
+                                <p>Website made as a term project.</p>
+                                <p>It supports orders in auto servicing. It has three levels of users (customers, workers, admins).</p>
+                                <p>Written using HTML, CSS3, JavaScript, PHP, MySQL</p>
+                                <a href="http://autocentre.5v.pl"><img src="graphic/link.png" alt=""> </a>
+                                <a href="https://github.com/adrian1203/AutoCentre"><img src="graphic/20185122010507976.png" alt=""> </a>
+                            </div>
+                        </article>
+                        <article id="dwa" class="element slider-slide">
+                            <h2 class="element-title">
+                                CrossWord Generator
+                            </h2>
+                            <div class="element-text">
+                                <p>Application generates panoramic crossword from a text file with passwords. It can convert crossoword to PDF file. We can load saved board, show answers, change board size </p>
+                                <p> Written in Java, JavaFx.It use Model–View–Controller.</p>
 
-                <div id="project-left">
-                    <figure><img src="graphic/autocentrebacground.png" alt="">
-                    </figure>
-                </div>
-                <div id="project-right">
-                    <h2>CrossWord Generator</h2>
-                    <p>Website made as a term project.</p>
-                    <p>It supports orders in auto servicing. It has three levels of users (customers, workers, admins).</p><p>Written using HTML, CSS3, JavaScript, PHP, MySQL</p>
-                    <a href="http://autocentre.5v.pl"><img src="graphic/logo.png" alt=""> </a>
-                    <a href="https://github.com/adrian1203/AutoCentre"><img src="graphic/github.png" alt=""> </a>
+                                <a href="https://github.com/adrian1203/CrossWord"><img src="graphic/20185122010507976.png" alt=""> </a>
+                            </div>
+                        </article>
 
-
+                    </div>
+                    <div class="slider-nav">
+                        <button type="button" class="slider-button slider-button-prev">Poprzedni</button>
+                        <button type="button" class="slider-button slider-button-next">Następny</button>
+                    </div>
+                    <ul class="slider-dots">
+                        <li class="slider-dots-element slider-dots-element-active"><button class="slider-dots-button" type="button">1</button></li>
+                        <li class="slider-dots-element"><button class="slider-dots-button" type="button">2</button></li>
+                        <li class="slider-dots-element"><button class="slider-dots-button" type="button">3</button></li>
+                    </ul>
                 </div>
             </div>
-            <div id="project" class="col-md-10">
 
-                <div id="project-left">
-                    <figure><img src="graphic/cross.png" alt="">
-                    </figure>
-                </div>
-                <div id="project-right">
-                    <h2>CrossWord Generator</h2>
-                    <p>Application generates panoramic crossword from a text file with passwords. It can convert crossoword to PDF file. We can load saved board, show answers, change board size </p>
-                    <p> Written in Java, JavaFx.It use Model–View–Controller.</p>
-                    <a href="https://github.com/adrian1203/CrossWord"><img src="graphic/github.png" alt=""> </a>
-                    
-
-                </div>
-            </div>
         </div>
     </div>
     <div class="container-fluid dark-cointainer" id="education-cointainer">
@@ -141,6 +154,7 @@
                 if (this.hash !== "") {
                     //event.preventDefault();
                     var hash = this.hash;
+                    var desiredHeight = $('#menu').height() + 10;
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
                     }, 900, function() {
@@ -151,6 +165,7 @@
         });
 
     </script>
+    <script src="js/slider.js"></script>
 
 </body>
 
