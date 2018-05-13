@@ -9,7 +9,7 @@ const Slider = function(elemSelector, opts) {
     this.options = Object.assign({}, defaultOpts, opts);
     this.sliderSelector = elemSelector;
     this.currentSlide = 0; //aktualny slide
-    this.time = null; //tutaj będziemy podczepiać setTimeout
+    this.time = null; 
     this.slider = null;
     this.elem = null;
     this.slides = null;
@@ -36,8 +36,10 @@ Slider.prototype.generateSlider = function() {
     this.slides[0].style.background="url('../graphic/header.jpg')";
     this.slides[1].style.background="url('../graphic/krzyzowka.png')";
 
-    //to jest zywa kolekcja, więc przy przeniesieniu kazdego slajda
-    //jej dlugosc maleje
+    this.slides[0].querySelector('.element-text').style.color="#fff";
+    this.slides[1].querySelector('.element-text').style.color="#1739A4";
+    this.slides[1].querySelector('.element-title').style.color="#1739A4";
+   
     while (this.slides.length) {
         this.slides[0].classList.add('slider-slide');
         slidesCnt.appendChild(this.slides[0]);
@@ -122,11 +124,8 @@ Slider.prototype.createDots = function() {
     ulDots.classList.add('slider-dots');
     ulDots.setAttribute('aria-label', 'Slider pagination');
 
-    //tworzymy pętlę w ilości liczby slajów
     for (let i=0; i<this.slides.length; i++) {
-        //każdorazowo tworzymy LI wraz z buttonem
-        //każdy button po kliknięciu zmieni slajd
-        //za pomocą metody changeSlide()
+       
 
         const li = document.createElement('li');
         li.classList.add('slider-dots-element');
@@ -151,6 +150,6 @@ Slider.prototype.createDots = function() {
 }
  
     
-const slide1 = new Slider('#pupa');
+const slide1 = new Slider('#slider-slides');
 
 
