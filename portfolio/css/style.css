@@ -112,3 +112,7 @@ a {
 #skils-lists .btn-primary {
     margin: 10px;
 }
+#contact-element{
+min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  top: 50%
+}
